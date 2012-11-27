@@ -1,6 +1,11 @@
 goog.provide('soft_eng.WorldListener');
 
 soft_eng.WorldListener = function(game) {
+    this.audio = new Audio('assets/wallhit.wav');
+    this.stopThenPlay = function() {
+        this.audio.currentTime = 0;
+        this.audio.play();
+    };
 	var b2Listener = Box2D.Dynamics.b2ContactListener;
 	var self = this;
     this.game = game;
@@ -24,7 +29,9 @@ soft_eng.WorldListener = function(game) {
 			//navigator.notification.vibrate(50);
 		}
 		if (contactDataA == MazeEnum.BALL) {
-			if (contactDataB == MazeEnum.TRAP) {
+			if (contactDataB == MazeEnum.WALL) {
+                self.stopThenPlay();
+            } else if (contactDataB == MazeEnum.TRAP) {
                 var ballData = contact.GetFixtureA().GetBody().GetUserData();
                 ballData.flaggedForDeletion = true;
 		game.timesTrapped++;
