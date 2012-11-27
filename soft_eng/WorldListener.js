@@ -1,14 +1,12 @@
 goog.provide('soft_eng.WorldListener');
 
 soft_eng.WorldListener = function(game) {
-    this.audio = new Audio('assets/wallhit.wav');
-    this.stopThenPlay = function() {
-        this.audio.currentTime = 0;
-        this.audio.play();
-    };
-	var b2Listener = Box2D.Dynamics.b2ContactListener;
 	var self = this;
     this.game = game;
+    self.wallhitsnd = new Media('/android_asset/www/assets/wallhit.wav');
+    self.trapsnd = new Media('/android_asset/www/assets/trap.wav');
+    self.goalsnd = new Media('/android_asset/www/assets/goal.wav');
+	var b2Listener = Box2D.Dynamics.b2ContactListener;
 	//Add listeners for contact
 	var listener = new b2Listener;
 
@@ -29,18 +27,25 @@ soft_eng.WorldListener = function(game) {
 			//navigator.notification.vibrate(50);
 		}
 		if (contactDataA == MazeEnum.BALL) {
-			if (contactDataB == MazeEnum.WALL) {
-                self.stopThenPlay();
-            } else if (contactDataB == MazeEnum.TRAP) {
+			if (contactDataB == MazeEnum.TRAP) {
                 var ballData = contact.GetFixtureA().GetBody().GetUserData();
                 ballData.flaggedForDeletion = true;
-		game.timesTrapped++;
+                game.timesTrapped++;
+                self.trapsnd.seekTo(0);
+                self.trapsnd.play();
 			} else if (contactDataB == MazeEnum.GOAL) {
 				var ballData = contact.GetFixtureA().GetBody().GetUserData();
                 ballData.flaggedForDeletion = true;
                 ballData.hasReachedTheGoal = true;
-			}
-		}
+                self.goalsnd.seekTo(0);
+                self.goalsnd.play();
+			} else {
+            }
+		} else if (contactDataA == MazeEnum.BLOCK) {
+            if (impulse.normalImpulses[0] < 0.05) return;
+            self.wallhitsnd.seekTo(0);
+            self.wallhitsnd.play();
+        }
 	}
 
 	listener.PreSolve = function(contact, oldManifold) {
