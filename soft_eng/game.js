@@ -64,7 +64,17 @@ soft_eng.Game = function(director, level) {
 	var ballAcceleration = {},
 	prevAcceleration = {};
     var world = new b2World(new b2Vec2(0, 0), true);
+    
+    var device = navigator.userAgent.toLowerCase();
+    
     var FRAME_RATE = 18;
+    
+    if (device.indexOf('nexus 7' > -1)) {
+        FRAME_RATE = 18;
+    } else if (device.indexOf('samsung-sgh' > -1)) {
+        FRAME_RATE = 45;
+    }
+    
     var balls = [];
     var goal = null;
     var traps = [];

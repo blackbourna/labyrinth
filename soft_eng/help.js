@@ -24,7 +24,7 @@ soft_eng.Help = function() {
 	layer.appendChild(txt1);
 	
 	var txt2 = new lime.Label().setFontSize(18).setSize(soft_eng.WIDTH * 0.80, 100).setPosition(soft_eng.WIDTH / 2, 250).setAlign('center').setFontColor('#ffffff');
-	txt2.setText('Align the phone horizontally, then control the red ball by tilting the phone until it reaches the green goal. Avoid black traps.');
+	txt2.setText('Control the red ball by tilting the phone until it reaches the goal! Avoid black traps!');
 	layer.appendChild(txt2);
 	
 	

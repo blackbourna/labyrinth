@@ -65,7 +65,8 @@ soft_eng.loadMainMenu = function() {
 	var helpButton = soft_eng.makeButton('Help').setPosition(0, 150);
 	goog.events.listen(helpButton, 'click', function() {
 		// show help window
-		soft_eng.loadHelpScene();
+		//soft_eng.loadHelpScene();
+        alert('Control the red ball by tilting the phone until it reaches the goal! Avoid black traps!');
 	});
 	buttonsLayer.appendChild(helpButton);
     
