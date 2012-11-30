@@ -11,6 +11,11 @@ goog.require("Levels");
 
 // entrypoint
 soft_eng.Game = function(director, level) {
+    if (level % Levels.length == Levels.length - 1) {
+        soft_eng.SCALE = 30.0;
+    } else {
+        soft_eng.SCALE = 60.0;
+    }
 	console.log("begin");
 	var startDate = new Date();
 	// maze object type enum
@@ -70,7 +75,7 @@ soft_eng.Game = function(director, level) {
     var FRAME_RATE = 18;
     
     if (deviceName.indexOf('nexus 7') > -1) {
-        FRAME_RATE = 18;
+        FRAME_RATE = 16;
     } else if (deviceName.indexOf('samsung-sgh') > -1) {
         FRAME_RATE = 45;
     }
