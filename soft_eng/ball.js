@@ -25,6 +25,6 @@ soft_eng.Ball = function(pos, world) {
 	this.body.SetUserData(data);
 	
 	this.sprite = (new lime.Circle)
-		.setFill('#FF0000')
+		.setFill("assets/p.png")
 		.setSize(radius * soft_eng.SCALE, radius * soft_eng.SCALE);
 }

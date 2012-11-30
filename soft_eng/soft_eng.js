@@ -54,7 +54,7 @@ soft_eng.loadMainMenu = function() {
 	layer.appendChild(buttonsLayer);
 	
 	// add play button
-	var playButton = soft_eng.makeButton('Play Game').setPosition(0, 100);
+	var playButton = soft_eng.makeButton('Play Game').setPosition(0, 80);
 	goog.events.listen(playButton, 'click', function() {
 		// play the game!!!
 		soft_eng.newGame();
@@ -62,12 +62,19 @@ soft_eng.loadMainMenu = function() {
 	buttonsLayer.appendChild(playButton);
 	
 	// add Help button
-	var helpButton = soft_eng.makeButton('Help').setPosition(0, 170);
+	var helpButton = soft_eng.makeButton('Help').setPosition(0, 150);
 	goog.events.listen(helpButton, 'click', function() {
 		// show help window
 		soft_eng.loadHelpScene();
 	});
 	buttonsLayer.appendChild(helpButton);
+    
+	// add Help button
+	var aboutButton = soft_eng.makeButton('About').setPosition(0, 220);
+	goog.events.listen(aboutButton, 'click', function() {
+		alert('Created by Andrew Blackbourn and Mohamed Ibrahim.\nCopyright 2012 Licensed under BSD 2-clause license ("Simplified BSD License" or "FreeBSD License")');
+	});
+	buttonsLayer.appendChild(aboutButton);
 	
 	// add the layer to the scene and view scene
 	scene.appendChild(layer);

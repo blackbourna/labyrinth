@@ -33,8 +33,25 @@ soft_eng.Game = function(director, level) {
 	layer.setPosition(0, 0);
 	scene.appendChild(layer);
 	
-	backgroundSprite = new lime.Sprite().setSize(soft_eng.WIDTH, soft_eng.HEIGHT).setFill('#a5ff00').setAnchorPoint(0,0);
-	layer.appendChild(backgroundSprite);
+	//backgroundSprite = new lime.Sprite().setSize(soft_eng.WIDTH, soft_eng.HEIGHT).setFill('#a5ff00').setAnchorPoint(0,0);
+	//layer.appendChild(backgroundSprite);
+    
+    var addBackgroundToScene = function (scene) {
+		var bgSize = 320;
+		var bgInterval = 450;
+
+		for (var x = 0; x < soft_eng.WIDTH + 100; x += 125) {
+			for (var y = 0; y < soft_eng.HEIGHT + 100; y += 125) {
+				var bgSprite = new lime.Sprite()
+					.setSize(bgSize, bgSize)
+					.setFill("assets/open.png")
+					.setAnchorPoint(0, 0)
+					.setPosition(x, y);
+				scene.appendChild(bgSprite);
+			}
+		}
+	}
+    addBackgroundToScene(layer);
 
 	//debugging labels
 	var xLabel = new lime.Label('').setAnchorPoint(0, 0).setPosition(20, 20);
@@ -43,7 +60,7 @@ soft_eng.Game = function(director, level) {
 	scene.appendChild(xLabel);
 	scene.appendChild(yLabel);
 	scene.appendChild(zLabel);
-	
+    
 	var ballAcceleration = {},
 	prevAcceleration = {};
     var world = new b2World(new b2Vec2(0, 0), true);
@@ -105,7 +122,7 @@ soft_eng.Game = function(director, level) {
         }
         console.log("Exiting Maze loop");
         console.log("Entering Game loop");
-        // http://stackoverflow.com/questions/12317040/box2dweb-walls-dont-bounce-a-slow-object
+        // http://stackoverflow.com/questions/12317040/box2dwebEMPTY-walls-dont-bounce-a-slow-object
         //Box2D.Common.b2Settings.b2_velocityThreshold = 0.0;
         // game loop
         lime.scheduleManager.setDisplayRate(FRAME_RATE);

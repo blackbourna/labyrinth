@@ -28,8 +28,14 @@ public class MainActivity extends DroidGap {
 		super.onDestroy();
 	}
 
+	
 
-
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		this.finish();
+	}
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
