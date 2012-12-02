@@ -18,3 +18,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep public class * extends com.phonegap.api.Plugin 
+-keep public class * extends org.apache.cordova.api.Plugin 
+-keep public class org.apache.cordova.DroidGap 
+-keep public class org.apache.cordova.** 
+-libraryjars /Path/To/PhoneGap/libs/commons-codec.jar
+-dontwarn android.webkit.*
