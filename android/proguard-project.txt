@@ -23,5 +23,10 @@
 -keep public class * extends org.apache.cordova.api.Plugin 
 -keep public class org.apache.cordova.DroidGap 
 -keep public class org.apache.cordova.** 
--libraryjars /Path/To/PhoneGap/libs/commons-codec.jar
+-libraryjars /home/andrew/labyrinth/android/libs/cordova-2.0.0.jar
 -dontwarn android.webkit.*
+-dontwarn org.mortbay.**
+-dontwarn org.slf4j.**
+-dontwarn org.apache.log4j.**
+-dontwarn org.apache.commons.logging.**
+-dontwarn org.apache.commons.codec.binary.**

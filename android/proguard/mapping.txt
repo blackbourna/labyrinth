@@ -1,0 +1,1674 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    void bumpBackStackNesting(int) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> a
+    java.lang.String getName() -> a
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> N
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    int mFragmentId -> u
+    int mContainerId -> v
+    java.lang.String mTag -> w
+    boolean mHidden -> x
+    boolean mDetached -> y
+    boolean mRetainInstance -> z
+    boolean mRetaining -> A
+    boolean mHasMenu -> B
+    boolean mMenuVisible -> C
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> L
+    boolean mCheckedForLoaderManager -> M
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState() -> a
+    void setIndex(int) -> a
+    boolean isInBackStack() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> c
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> a
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> b
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> c
+    void onStart() -> d
+    void onResume() -> e
+    void onSaveInstanceState(android.os.Bundle) -> d
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> f
+    void onStop() -> g
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> h
+    void onDestroy() -> i
+    void initState() -> j
+    void onDetach() -> k
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> l
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void performStart() -> m
+    void performStop() -> n
+    void performReallyStop() -> o
+    void performDestroyView() -> p
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.e:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.f:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.g:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    boolean mCreated -> c
+    boolean mResumed -> d
+    boolean mStopped -> e
+    boolean mReallyStopped -> f
+    boolean mRetaining -> g
+    boolean mOptionsMenuInvalidated -> h
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    android.support.v4.util.SparseArrayCompat mAllLoaderManagers -> k
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void supportInvalidateOptionsMenu() -> c
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> d
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragmentIndex(int) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(int,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.h:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.i:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    android.support.v4.util.SparseArrayCompat loaders -> e
+android.support.v4.app.FragmentManager -> android.support.v4.app.j:
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.k:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    boolean mNeedMenuInvalidate -> p
+    boolean mStateSaved -> q
+    boolean mDestroyed -> r
+    java.lang.String mNoTransactionsBecause -> s
+    boolean mHavePendingDeferredStart -> t
+    android.os.Bundle mStateBundle -> u
+    android.util.SparseArray mStateArray -> v
+    java.lang.Runnable mExecCommit -> w
+    android.view.animation.Interpolator DECELERATE_QUINT -> x
+    android.view.animation.Interpolator DECELERATE_CUBIC -> y
+    android.view.animation.Interpolator ACCELERATE_QUINT -> z
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> A
+    boolean executePendingTransactions() -> a
+    boolean popBackStackImmediate() -> b
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> c
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> r
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> d
+    void reportBackStackChanged() -> e
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> a
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> f
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> g
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity) -> a
+    void noteStateNotSaved() -> h
+    void dispatchCreate() -> i
+    void dispatchActivityCreated() -> j
+    void dispatchStart() -> k
+    void dispatchResume() -> l
+    void dispatchPause() -> m
+    void dispatchStop() -> n
+    void dispatchReallyStop() -> o
+    void dispatchDestroy() -> p
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> q
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.m:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.n:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.p:
+android.support.v4.app.LoaderManager -> android.support.v4.app.q:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.r:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.s:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    android.support.v4.app.FragmentActivity mActivity -> d
+    boolean mStarted -> e
+    boolean mRetaining -> f
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.t:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.u:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.v:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.b:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.c:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    java.lang.Object get(int) -> a
+    java.lang.Object get(int,java.lang.Object) -> a
+    void delete(int) -> b
+    void remove(int) -> c
+    void removeAt(int) -> d
+    void gc() -> c
+    void put(int,java.lang.Object) -> b
+    int size() -> a
+    int keyAt(int) -> e
+    java.lang.Object valueAt(int) -> f
+    void clear() -> b
+    int binarySearch(int[],int,int,int) -> a
+    int idealByteArraySize(int) -> g
+    int idealIntArraySize(int) -> h
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.e:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> a
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.f:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.g:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.h:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.i:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.j:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> android.support.v4.view.k:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    float getPageWidth(int) -> a
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.l:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.m:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.n:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.o:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.p:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> android.support.v4.view.q:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.r:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.s:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.t:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.u:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.v:
+    void postInvalidateOnAnimation(android.view.View) -> b
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.w:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.x:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatHC -> android.support.v4.view.y:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.z:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompatJB -> android.support.v4.view.aa:
+    void postInvalidateOnAnimation(android.view.View) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    android.view.animation.Interpolator sInterpolator -> c
+    java.util.ArrayList mItems -> d
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> e
+    android.graphics.Rect mTempRect -> f
+    android.support.v4.view.PagerAdapter mAdapter -> g
+    int mCurItem -> h
+    int mRestoredCurItem -> i
+    android.os.Parcelable mRestoredAdapterState -> j
+    java.lang.ClassLoader mRestoredClassLoader -> k
+    android.widget.Scroller mScroller -> l
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> m
+    int mPageMargin -> n
+    android.graphics.drawable.Drawable mMarginDrawable -> o
+    int mTopPageBounds -> p
+    int mBottomPageBounds -> q
+    float mFirstOffset -> r
+    float mLastOffset -> s
+    int mChildWidthMeasureSpec -> t
+    int mChildHeightMeasureSpec -> u
+    boolean mInLayout -> v
+    boolean mScrollingCacheEnabled -> w
+    boolean mPopulatePending -> x
+    int mOffscreenPageLimit -> y
+    boolean mIsBeingDragged -> z
+    boolean mIsUnableToDrag -> A
+    int mDefaultGutterSize -> B
+    int mGutterSize -> C
+    int mTouchSlop -> D
+    float mInitialMotionX -> E
+    float mLastMotionX -> F
+    float mLastMotionY -> G
+    int mActivePointerId -> H
+    android.view.VelocityTracker mVelocityTracker -> I
+    int mMinimumVelocity -> J
+    int mMaximumVelocity -> K
+    int mFlingDistance -> L
+    int mCloseEnough -> M
+    boolean mFakeDragging -> N
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> O
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> P
+    boolean mFirstLayout -> Q
+    boolean mNeedCalculatePageOffsets -> R
+    boolean mCalledSuper -> S
+    int mDecorChildCount -> T
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> U
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> V
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> W
+    int mScrollState -> Z
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    void populate(int) -> a
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll() -> g
+    boolean isGutterDrag(float,float) -> a
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> h
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> i
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$300() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.ab:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.ac:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ad:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.ae:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.af:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ag:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.ah:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.ai:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.aj:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.blackbourna.softeng.MazeBallActivity -> com.blackbourna.softeng.MazeBallActivity:
+    android.os.PowerManager$WakeLock wakelock -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void onPause() -> onPause
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+com.phonegap.api.Plugin -> com.phonegap.api.Plugin:
+org.apache.cordova.AccelListener -> org.apache.cordova.AccelListener:
+    int STOPPED -> a
+    int STARTING -> b
+    int RUNNING -> c
+    int ERROR_FAILED_TO_START -> d
+    float x -> e
+    float y -> f
+    float z -> g
+    long timestamp -> h
+    int status -> i
+    int accuracy -> j
+    android.hardware.SensorManager sensorManager -> k
+    android.hardware.Sensor mSensor -> l
+    java.lang.String callbackId -> m
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void onDestroy() -> a
+    int start() -> b
+    void stop() -> c
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    void fail(int,java.lang.String) -> a
+    void win() -> d
+    void setStatus(int) -> a
+    org.json.JSONObject getAccelerationJSON() -> e
+org.apache.cordova.App -> org.apache.cordova.App:
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void clearCache() -> b
+    void loadUrl(java.lang.String,org.json.JSONObject) -> a
+    void cancelLoadUrl() -> c
+    void clearHistory() -> d
+    void backHistory() -> e
+    void overrideBackbutton(boolean) -> a
+    void overrideButton(java.lang.String,boolean) -> a
+    void exitApp() -> f
+org.apache.cordova.App$1 -> org.apache.cordova.a:
+    org.apache.cordova.App this$0 -> a
+    void run() -> run
+org.apache.cordova.AudioHandler -> org.apache.cordova.AudioHandler:
+    java.lang.String TAG -> a
+    java.util.HashMap players -> b
+    java.util.ArrayList pausedForPhone -> c
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> a
+    boolean release(java.lang.String) -> h
+    void startRecordingAudio(java.lang.String,java.lang.String) -> a
+    void stopRecordingAudio(java.lang.String) -> b
+    void startPlayingAudio(java.lang.String,java.lang.String) -> b
+    void seekToAudio(java.lang.String,int) -> a
+    void pausePlayingAudio(java.lang.String) -> c
+    void stopPlayingAudio(java.lang.String) -> d
+    float getCurrentPositionAudio(java.lang.String) -> e
+    float getDurationAudio(java.lang.String,java.lang.String) -> c
+    void setVolume(java.lang.String,float) -> a
+org.apache.cordova.AudioPlayer -> org.apache.cordova.AudioPlayer:
+    int MEDIA_STATE -> a
+    int MEDIA_DURATION -> b
+    int MEDIA_POSITION -> c
+    int MEDIA_ERROR -> d
+    int MEDIA_ERR_NONE_ACTIVE -> e
+    int MEDIA_ERR_ABORTED -> f
+    int MEDIA_ERR_NETWORK -> g
+    int MEDIA_ERR_DECODE -> h
+    int MEDIA_ERR_NONE_SUPPORTED -> i
+    org.apache.cordova.AudioHandler handler -> j
+    java.lang.String id -> k
+    org.apache.cordova.AudioPlayer$MODE mode -> l
+    org.apache.cordova.AudioPlayer$STATE state -> m
+    java.lang.String audioFile -> n
+    float duration -> o
+    android.media.MediaRecorder recorder -> p
+    java.lang.String tempFile -> q
+    android.media.MediaPlayer player -> r
+    boolean prepareOnly -> s
+    int seekOnPrepared -> t
+    void destroy() -> a
+    void startRecording(java.lang.String) -> a
+    void moveFile(java.lang.String) -> b
+    void stopRecording() -> b
+    void startPlaying(java.lang.String) -> c
+    void seekToPlaying(int) -> a
+    void pausePlaying() -> c
+    void stopPlaying() -> d
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+    long getCurrentPosition() -> e
+    boolean isStreaming(java.lang.String) -> d
+    float getDuration(java.lang.String) -> e
+    void onPrepared(android.media.MediaPlayer) -> onPrepared
+    float getDurationInSeconds() -> g
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+    void setState(org.apache.cordova.AudioPlayer$STATE) -> a
+    void setMode(org.apache.cordova.AudioPlayer$MODE) -> a
+    int getState() -> f
+    void setVolume(float) -> a
+    boolean playMode() -> h
+    boolean readyPlayer(java.lang.String) -> f
+    void loadAudioFile(java.lang.String) -> g
+org.apache.cordova.AudioPlayer$1 -> org.apache.cordova.b:
+    int[] $SwitchMap$org$apache$cordova$AudioPlayer$MODE -> a
+    int[] $SwitchMap$org$apache$cordova$AudioPlayer$STATE -> b
+org.apache.cordova.AudioPlayer$MODE -> org.apache.cordova.AudioPlayer$MODE:
+    org.apache.cordova.AudioPlayer$MODE NONE -> a
+    org.apache.cordova.AudioPlayer$MODE PLAY -> b
+    org.apache.cordova.AudioPlayer$MODE RECORD -> c
+    org.apache.cordova.AudioPlayer$MODE[] $VALUES -> d
+    org.apache.cordova.AudioPlayer$MODE[] values() -> values
+    org.apache.cordova.AudioPlayer$MODE valueOf(java.lang.String) -> valueOf
+org.apache.cordova.AudioPlayer$STATE -> org.apache.cordova.AudioPlayer$STATE:
+    org.apache.cordova.AudioPlayer$STATE MEDIA_NONE -> a
+    org.apache.cordova.AudioPlayer$STATE MEDIA_LOADING -> b
+    org.apache.cordova.AudioPlayer$STATE MEDIA_STARTING -> c
+    org.apache.cordova.AudioPlayer$STATE MEDIA_RUNNING -> d
+    org.apache.cordova.AudioPlayer$STATE MEDIA_PAUSED -> e
+    org.apache.cordova.AudioPlayer$STATE MEDIA_STOPPED -> f
+    org.apache.cordova.AudioPlayer$STATE[] $VALUES -> g
+    org.apache.cordova.AudioPlayer$STATE[] values() -> values
+    org.apache.cordova.AudioPlayer$STATE valueOf(java.lang.String) -> valueOf
+org.apache.cordova.AuthenticationToken -> org.apache.cordova.AuthenticationToken:
+    java.lang.String userName -> a
+    java.lang.String password -> b
+    java.lang.String getUserName() -> a
+    java.lang.String getPassword() -> b
+org.apache.cordova.BatteryListener -> org.apache.cordova.BatteryListener:
+    android.content.BroadcastReceiver receiver -> a
+    java.lang.String batteryCallbackId -> b
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void onDestroy() -> a
+    void removeBatteryListener() -> b
+    org.json.JSONObject getBatteryInfo(android.content.Intent) -> b
+    void updateBatteryInfo(android.content.Intent) -> c
+    void sendUpdate(org.json.JSONObject,boolean) -> a
+    void access$000(org.apache.cordova.BatteryListener,android.content.Intent) -> a
+org.apache.cordova.BatteryListener$1 -> org.apache.cordova.c:
+    org.apache.cordova.BatteryListener this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+org.apache.cordova.BuildConfig -> org.apache.cordova.BuildConfig:
+org.apache.cordova.CallbackServer -> org.apache.cordova.CallbackServer:
+    java.util.LinkedList javascript -> a
+    int port -> b
+    java.lang.Thread serverThread -> c
+    boolean active -> d
+    boolean empty -> e
+    boolean usePolling -> f
+    java.lang.String token -> g
+    void init(java.lang.String) -> a
+    void reinit(java.lang.String) -> b
+    boolean usePolling() -> a
+    int getPort() -> b
+    java.lang.String getToken() -> c
+    void startServer() -> d
+    void restartServer() -> e
+    void run() -> run
+    void stopServer() -> f
+    void destroy() -> g
+    java.lang.String getJavascript() -> h
+    void sendJavascript(java.lang.String) -> c
+    java.lang.String encode(java.lang.String,java.lang.String) -> a
+    void convert(java.lang.String,java.lang.StringBuilder,java.lang.String) -> a
+org.apache.cordova.CameraLauncher -> org.apache.cordova.CameraLauncher:
+    int mQuality -> b
+    int targetWidth -> c
+    int targetHeight -> d
+    android.net.Uri imageUri -> e
+    int encodingType -> f
+    int mediaType -> g
+    boolean saveToPhotoAlbum -> h
+    boolean correctOrientation -> i
+    boolean allowEdit -> j
+    java.lang.String callbackId -> a
+    int numPics -> k
+    android.media.MediaScannerConnection conn -> l
+    android.net.Uri scanMe -> m
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void takePicture(int,int) -> a
+    java.io.File createCaptureFile(int) -> a
+    void getImage(int,int) -> b
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.graphics.Bitmap getRotatedBitmap(int,android.graphics.Bitmap,org.apache.cordova.ExifHelper) -> a
+    void writeUncompressedImage(android.net.Uri) -> a
+    android.net.Uri getUriFromMediaStore() -> b
+    android.graphics.Bitmap getScaledBitmap(java.lang.String) -> c
+    int[] calculateAspectRatio(int,int) -> c
+    int calculateSampleSize(int,int,int,int) -> a
+    android.database.Cursor queryImgDB(android.net.Uri) -> b
+    void cleanup(int,android.net.Uri,android.net.Uri,android.graphics.Bitmap) -> a
+    void checkForDuplicateImage(int) -> b
+    android.net.Uri whichContentStore() -> c
+    void processPicture(android.graphics.Bitmap) -> a
+    void failPicture(java.lang.String) -> b
+    void scanForGallery(android.net.Uri) -> c
+    void onMediaScannerConnected() -> onMediaScannerConnected
+    void onScanCompleted(java.lang.String,android.net.Uri) -> onScanCompleted
+org.apache.cordova.Capture -> org.apache.cordova.Capture:
+    java.lang.String callbackId -> a
+    long limit -> b
+    double duration -> c
+    org.json.JSONArray results -> d
+    android.net.Uri imageUri -> e
+    int numPics -> f
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    org.json.JSONObject getFormatData(java.lang.String,java.lang.String) -> a
+    org.json.JSONObject getImageData(java.lang.String,org.json.JSONObject) -> a
+    org.json.JSONObject getAudioVideoData(java.lang.String,org.json.JSONObject,boolean) -> a
+    void captureAudio() -> b
+    void captureImage() -> c
+    void captureVideo(double) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    org.json.JSONObject createMediaFile(android.net.Uri) -> a
+    org.json.JSONObject createErrorObject(int,java.lang.String) -> a
+    void fail(org.json.JSONObject) -> a
+    android.database.Cursor queryImgDB(android.net.Uri) -> b
+    void checkForDuplicateImage() -> d
+    android.net.Uri whichContentStore() -> e
+org.apache.cordova.CompassListener -> org.apache.cordova.CompassListener:
+    int STOPPED -> a
+    int STARTING -> b
+    int RUNNING -> c
+    int ERROR_FAILED_TO_START -> d
+    long TIMEOUT -> e
+    int status -> f
+    float heading -> g
+    long timeStamp -> h
+    long lastAccessTime -> i
+    android.hardware.SensorManager sensorManager -> k
+    android.hardware.Sensor mSensor -> j
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    int start() -> b
+    void stop() -> c
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    int getStatus() -> d
+    float getHeading() -> e
+    void setTimeout(long) -> a
+    long getTimeout() -> f
+    void setStatus(int) -> a
+    org.json.JSONObject getCompassHeading() -> g
+org.apache.cordova.ContactAccessor -> org.apache.cordova.ContactAccessor:
+    java.lang.String LOG_TAG -> a
+    org.apache.cordova.api.CordovaInterface mApp -> b
+    android.webkit.WebView mView -> c
+    boolean isRequired(java.lang.String,java.util.HashMap) -> a
+    java.util.HashMap buildPopulationSet(org.json.JSONArray) -> a
+    java.lang.String getJsonString(org.json.JSONObject,java.lang.String) -> a
+    java.lang.String save(org.json.JSONObject) -> a
+    org.json.JSONArray search(org.json.JSONArray,org.json.JSONObject) -> a
+    org.json.JSONObject getContactById(java.lang.String) -> a
+    boolean remove(java.lang.String) -> b
+org.apache.cordova.ContactAccessor$WhereOptions -> org.apache.cordova.d:
+    java.lang.String where -> b
+    java.lang.String[] whereArgs -> c
+    org.apache.cordova.ContactAccessor this$0 -> a
+    void setWhere(java.lang.String) -> a
+    java.lang.String getWhere() -> a
+    void setWhereArgs(java.lang.String[]) -> a
+    java.lang.String[] getWhereArgs() -> b
+org.apache.cordova.ContactAccessorSdk5 -> org.apache.cordova.ContactAccessorSdk5:
+    java.util.Map dbMap -> d
+    org.json.JSONArray search(org.json.JSONArray,org.json.JSONObject) -> a
+    org.json.JSONObject getContactById(java.lang.String) -> a
+    org.json.JSONArray populateContactArray(int,java.util.HashMap,android.database.Cursor) -> a
+    org.apache.cordova.ContactAccessor$WhereOptions buildIdClause(java.util.Set,java.lang.String) -> a
+    org.json.JSONObject populateContact(org.json.JSONObject,org.json.JSONArray,org.json.JSONArray,org.json.JSONArray,org.json.JSONArray,org.json.JSONArray,org.json.JSONArray,org.json.JSONArray) -> a
+    org.apache.cordova.ContactAccessor$WhereOptions buildWhereClause(org.json.JSONArray,java.lang.String) -> a
+    boolean isWildCardSearch(org.json.JSONArray) -> b
+    org.json.JSONObject organizationQuery(android.database.Cursor) -> a
+    org.json.JSONObject addressQuery(android.database.Cursor) -> b
+    org.json.JSONObject nameQuery(android.database.Cursor) -> c
+    org.json.JSONObject phoneQuery(android.database.Cursor) -> d
+    org.json.JSONObject emailQuery(android.database.Cursor) -> e
+    org.json.JSONObject imQuery(android.database.Cursor) -> f
+    org.json.JSONObject websiteQuery(android.database.Cursor) -> g
+    org.json.JSONObject photoQuery(android.database.Cursor,java.lang.String) -> a
+    java.lang.String save(org.json.JSONObject) -> a
+    java.lang.String modifyContact(java.lang.String,org.json.JSONObject,java.lang.String,java.lang.String) -> a
+    void insertWebsite(java.util.ArrayList,org.json.JSONObject) -> a
+    void insertIm(java.util.ArrayList,org.json.JSONObject) -> b
+    void insertOrganization(java.util.ArrayList,org.json.JSONObject) -> c
+    void insertAddress(java.util.ArrayList,org.json.JSONObject) -> d
+    void insertEmail(java.util.ArrayList,org.json.JSONObject) -> e
+    void insertPhone(java.util.ArrayList,org.json.JSONObject) -> f
+    void insertPhoto(java.util.ArrayList,org.json.JSONObject) -> g
+    byte[] getPhotoBytes(java.lang.String) -> c
+    java.io.InputStream getPathFromUri(java.lang.String) -> d
+    java.lang.String createNewContact(org.json.JSONObject,java.lang.String,java.lang.String) -> a
+    boolean remove(java.lang.String) -> b
+    int getPhoneType(java.lang.String) -> e
+    java.lang.String getPhoneType(int) -> a
+    int getContactType(java.lang.String) -> f
+    java.lang.String getContactType(int) -> b
+    int getOrgType(java.lang.String) -> g
+    java.lang.String getOrgType(int) -> c
+    int getAddressType(java.lang.String) -> h
+    java.lang.String getAddressType(int) -> d
+org.apache.cordova.ContactManager -> org.apache.cordova.ContactManager:
+    org.apache.cordova.ContactAccessor contactAccessor -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+org.apache.cordova.CordovaChromeClient -> org.apache.cordova.CordovaChromeClient:
+    java.lang.String TAG -> a
+    long MAX_QUOTA -> b
+    org.apache.cordova.api.CordovaInterface cordova -> c
+    org.apache.cordova.CordovaWebView appView -> d
+    void setWebView(org.apache.cordova.CordovaWebView) -> a
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+    void onExceededDatabaseQuota(java.lang.String,java.lang.String,long,long,long,android.webkit.WebStorage$QuotaUpdater) -> onExceededDatabaseQuota
+    void onConsoleMessage(java.lang.String,int,java.lang.String) -> onConsoleMessage
+    boolean onConsoleMessage(android.webkit.ConsoleMessage) -> onConsoleMessage
+    void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
+org.apache.cordova.CordovaChromeClient$1 -> org.apache.cordova.e:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.CordovaChromeClient$2 -> org.apache.cordova.f:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+org.apache.cordova.CordovaChromeClient$3 -> org.apache.cordova.g:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+org.apache.cordova.CordovaChromeClient$4 -> org.apache.cordova.h:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.CordovaChromeClient$5 -> org.apache.cordova.i:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.CordovaChromeClient$6 -> org.apache.cordova.j:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+org.apache.cordova.CordovaChromeClient$7 -> org.apache.cordova.k:
+    android.webkit.JsResult val$result -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+org.apache.cordova.CordovaChromeClient$8 -> org.apache.cordova.l:
+    android.widget.EditText val$input -> a
+    android.webkit.JsPromptResult val$res -> b
+    org.apache.cordova.CordovaChromeClient this$0 -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.CordovaChromeClient$9 -> org.apache.cordova.m:
+    android.webkit.JsPromptResult val$res -> a
+    org.apache.cordova.CordovaChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.CordovaLocationListener -> org.apache.cordova.CordovaLocationListener:
+    int PERMISSION_DENIED -> a
+    int POSITION_UNAVAILABLE -> b
+    int TIMEOUT -> c
+    android.location.LocationManager locationManager -> d
+    org.apache.cordova.GeoBroker owner -> g
+    boolean running -> e
+    java.util.HashMap watches -> f
+    java.util.List callbacks -> h
+    java.lang.String TAG -> i
+    void fail(int,java.lang.String) -> a
+    void win(android.location.Location) -> a
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    int size() -> a
+    void addWatch(java.lang.String,java.lang.String) -> a
+    void addCallback(java.lang.String) -> a
+    void clearWatch(java.lang.String) -> b
+    void destroy() -> b
+    void start() -> c
+    void stop() -> d
+org.apache.cordova.CordovaWebView -> org.apache.cordova.CordovaWebView:
+    java.util.ArrayList whiteList -> g
+    java.util.HashMap whiteListCache -> h
+    java.util.ArrayList keyDownCodes -> i
+    java.util.ArrayList keyUpCodes -> j
+    org.apache.cordova.api.PluginManager pluginManager -> a
+    org.apache.cordova.CallbackServer callbackServer -> b
+    org.apache.cordova.api.CordovaInterface cordova -> k
+    org.apache.cordova.CordovaWebViewClient viewClient -> c
+    org.apache.cordova.CordovaChromeClient chromeClient -> l
+    java.lang.String url -> m
+    java.lang.String baseUrl -> d
+    java.util.Stack urls -> n
+    boolean useBrowserHistory -> e
+    int loadUrlTimeout -> f
+    boolean bound -> o
+    void setup() -> c
+    void setWebViewClient(org.apache.cordova.CordovaWebViewClient) -> setWebViewClient
+    void setWebChromeClient(org.apache.cordova.CordovaChromeClient) -> setWebChromeClient
+    void addWhiteListEntry(java.lang.String,boolean) -> a
+    boolean isUrlWhiteListed(java.lang.String) -> a
+    void loadUrl(java.lang.String) -> loadUrl
+    void loadUrlIntoView(java.lang.String) -> b
+    void loadUrlNow(java.lang.String) -> e
+    void sendJavascript(java.lang.String) -> c
+    void postMessage(java.lang.String,java.lang.Object) -> a
+    java.lang.String peekAtUrlStack() -> a
+    void pushUrl(java.lang.String) -> d
+    boolean backHistory() -> b
+    boolean canGoBack() -> canGoBack
+    void showWebPage(java.lang.String,boolean,boolean,java.util.HashMap) -> a
+    void loadConfiguration() -> d
+    java.lang.String getProperty(java.lang.String,java.lang.String) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void bindButton(boolean) -> a
+    void bindButton(java.lang.String,boolean) -> b
+    org.apache.cordova.api.CordovaInterface access$000(org.apache.cordova.CordovaWebView) -> a
+    void access$100(org.apache.cordova.CordovaWebView,java.lang.String) -> a
+org.apache.cordova.CordovaWebView$1 -> org.apache.cordova.n:
+    org.apache.cordova.CordovaWebView val$me -> a
+    java.lang.String val$url -> b
+    org.apache.cordova.CordovaWebView this$0 -> c
+    void run() -> run
+org.apache.cordova.CordovaWebView$2 -> org.apache.cordova.o:
+    int val$loadUrlTimeoutValue -> a
+    org.apache.cordova.CordovaWebView val$me -> b
+    int val$currentLoadUrlTimeout -> c
+    java.lang.Runnable val$loadError -> d
+    org.apache.cordova.CordovaWebView this$0 -> e
+    void run() -> run
+org.apache.cordova.CordovaWebView$3 -> org.apache.cordova.p:
+    java.lang.Runnable val$timeoutCheck -> a
+    org.apache.cordova.CordovaWebView val$me -> b
+    java.lang.String val$url -> c
+    org.apache.cordova.CordovaWebView this$0 -> d
+    void run() -> run
+org.apache.cordova.CordovaWebViewClient -> org.apache.cordova.CordovaWebViewClient:
+    org.apache.cordova.api.CordovaInterface cordova -> a
+    org.apache.cordova.CordovaWebView appView -> b
+    boolean doClearHistory -> c
+    java.util.Hashtable authenticationTokens -> d
+    void setWebView(org.apache.cordova.CordovaWebView) -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onReceivedHttpAuthRequest(android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String) -> onReceivedHttpAuthRequest
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onReceivedSslError(android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError) -> onReceivedSslError
+    void doUpdateVisitedHistory(android.webkit.WebView,java.lang.String,boolean) -> doUpdateVisitedHistory
+    org.apache.cordova.AuthenticationToken getAuthenticationToken(java.lang.String,java.lang.String) -> a
+    android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView,java.lang.String) -> shouldInterceptRequest
+    android.webkit.WebResourceResponse generateWebResourceResponse(java.lang.String) -> a
+org.apache.cordova.CordovaWebViewClient$1 -> org.apache.cordova.q:
+    org.apache.cordova.CordovaWebViewClient this$0 -> a
+    void run() -> run
+org.apache.cordova.CordovaWebViewClient$1$1 -> org.apache.cordova.r:
+    org.apache.cordova.CordovaWebViewClient$1 this$1 -> a
+    void run() -> run
+org.apache.cordova.Device -> org.apache.cordova.Device:
+    java.lang.String cordovaVersion -> a
+    java.lang.String platform -> b
+    java.lang.String uuid -> c
+    android.content.BroadcastReceiver telephonyReceiver -> d
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    void initTelephonyReceiver() -> e
+    java.lang.String getUuid() -> b
+    java.lang.String getProductName() -> c
+    java.lang.String getOSVersion() -> d
+org.apache.cordova.Device$1 -> org.apache.cordova.s:
+    org.apache.cordova.Device this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+org.apache.cordova.DirectoryManager -> org.apache.cordova.DirectoryManager:
+    boolean testFileExists(java.lang.String) -> a
+    long getFreeDiskSpace(boolean) -> a
+    long freeSpaceCalculation(java.lang.String) -> b
+    boolean testSaveLocationExists() -> a
+    java.io.File constructFilePaths(java.lang.String,java.lang.String) -> a
+    java.lang.String getTempDirectoryPath(android.content.Context) -> a
+org.apache.cordova.DroidGap -> org.apache.cordova.DroidGap:
+    java.lang.String TAG -> b
+    org.apache.cordova.CordovaWebView appView -> c
+    android.widget.LinearLayout root -> d
+    boolean cancelLoadUrl -> e
+    android.app.ProgressDialog spinnerDialog -> f
+    int ACTIVITY_STARTING -> a
+    int ACTIVITY_RUNNING -> o
+    int ACTIVITY_EXITING -> p
+    int activityState -> q
+    java.lang.String baseUrl -> g
+    org.apache.cordova.api.IPlugin activityResultCallback -> h
+    boolean activityResultKeepRunning -> i
+    int backgroundColor -> r
+    int splashscreen -> j
+    int splashscreenTime -> k
+    int loadUrlTimeoutValue -> l
+    boolean keepRunning -> m
+    android.app.Dialog splashDialog -> n
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Activity getActivity() -> a
+    void init() -> b
+    void init(org.apache.cordova.CordovaWebView,org.apache.cordova.CordovaWebViewClient,org.apache.cordova.CordovaChromeClient) -> a
+    void loadUrl(java.lang.String) -> a
+    void loadSpinner() -> c
+    void cancelLoadUrl() -> d
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    boolean getBooleanProperty(java.lang.String,boolean) -> a
+    int getIntegerProperty(java.lang.String,int) -> a
+    java.lang.String getStringProperty(java.lang.String,java.lang.String) -> a
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onDestroy() -> onDestroy
+    void postMessage(java.lang.String,java.lang.Object) -> a
+    void spinnerStart(java.lang.String,java.lang.String) -> b
+    void spinnerStop() -> e
+    void endActivity() -> f
+    void startActivityForResult(org.apache.cordova.api.IPlugin,android.content.Intent,int) -> a
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onReceivedError(int,java.lang.String,java.lang.String) -> a
+    void displayError(java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void removeSplashScreen() -> g
+    void showSplashScreen(int) -> a
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> b
+org.apache.cordova.DroidGap$1 -> org.apache.cordova.t:
+    org.apache.cordova.DroidGap val$me -> a
+    org.apache.cordova.DroidGap this$0 -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+org.apache.cordova.DroidGap$2 -> org.apache.cordova.u:
+    org.apache.cordova.DroidGap val$me -> a
+    java.lang.String val$errorUrl -> b
+    org.apache.cordova.DroidGap this$0 -> c
+    void run() -> run
+org.apache.cordova.DroidGap$3 -> org.apache.cordova.v:
+    boolean val$exit -> a
+    org.apache.cordova.DroidGap val$me -> b
+    java.lang.String val$description -> c
+    java.lang.String val$failingUrl -> d
+    org.apache.cordova.DroidGap this$0 -> e
+    void run() -> run
+org.apache.cordova.DroidGap$4 -> org.apache.cordova.w:
+    org.apache.cordova.DroidGap val$me -> a
+    java.lang.String val$message -> b
+    java.lang.String val$title -> c
+    java.lang.String val$button -> d
+    boolean val$exit -> e
+    org.apache.cordova.DroidGap this$0 -> f
+    void run() -> run
+org.apache.cordova.DroidGap$4$1 -> org.apache.cordova.x:
+    org.apache.cordova.DroidGap$4 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.DroidGap$5 -> org.apache.cordova.y:
+    org.apache.cordova.DroidGap val$that -> a
+    int val$time -> b
+    org.apache.cordova.DroidGap this$0 -> c
+    void run() -> run
+org.apache.cordova.DroidGap$5$1 -> org.apache.cordova.z:
+    org.apache.cordova.DroidGap$5 this$1 -> a
+    void run() -> run
+org.apache.cordova.ExifHelper -> org.apache.cordova.ExifHelper:
+    java.lang.String aperature -> a
+    java.lang.String datetime -> b
+    java.lang.String exposureTime -> c
+    java.lang.String flash -> d
+    java.lang.String focalLength -> e
+    java.lang.String gpsAltitude -> f
+    java.lang.String gpsAltitudeRef -> g
+    java.lang.String gpsDateStamp -> h
+    java.lang.String gpsLatitude -> i
+    java.lang.String gpsLatitudeRef -> j
+    java.lang.String gpsLongitude -> k
+    java.lang.String gpsLongitudeRef -> l
+    java.lang.String gpsProcessingMethod -> m
+    java.lang.String gpsTimestamp -> n
+    java.lang.String iso -> o
+    java.lang.String make -> p
+    java.lang.String model -> q
+    java.lang.String orientation -> r
+    java.lang.String whiteBalance -> s
+    android.media.ExifInterface inFile -> t
+    android.media.ExifInterface outFile -> u
+    void createInFile(java.lang.String) -> a
+    void createOutFile(java.lang.String) -> b
+    void readExifData() -> a
+    void writeExifData() -> b
+    int getOrientation() -> c
+    void resetOrientation() -> d
+org.apache.cordova.FileTransfer -> org.apache.cordova.FileTransfer:
+    int FILE_NOT_FOUND_ERR -> a
+    int INVALID_URL_ERR -> b
+    int CONNECTION_ERR -> c
+    javax.net.ssl.SSLSocketFactory defaultSSLSocketFactory -> e
+    javax.net.ssl.HostnameVerifier defaultHostnameVerifier -> f
+    javax.net.ssl.HostnameVerifier DO_NOT_VERIFY -> d
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    org.apache.cordova.api.PluginResult upload(java.lang.String,java.lang.String,org.json.JSONArray) -> a
+    void trustAllHosts() -> b
+    org.json.JSONObject createFileTransferError(int,java.lang.String,java.lang.String,java.net.HttpURLConnection) -> a
+    org.json.JSONObject createFileTransferError(int,java.lang.String,java.lang.String,java.lang.Integer) -> a
+    java.lang.String getArgument(org.json.JSONArray,int,java.lang.String) -> a
+    org.apache.cordova.api.PluginResult download(java.lang.String,java.lang.String) -> a
+    java.io.InputStream getPathFromUri(java.lang.String) -> b
+    java.io.File getFileFromPath(java.lang.String) -> c
+org.apache.cordova.FileTransfer$1 -> org.apache.cordova.aa:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+org.apache.cordova.FileTransfer$2 -> org.apache.cordova.ab:
+    org.apache.cordova.FileTransfer this$0 -> a
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+org.apache.cordova.FileUploadResult -> org.apache.cordova.FileUploadResult:
+    long bytesSent -> a
+    int responseCode -> b
+    java.lang.String response -> c
+    void setBytesSent(long) -> a
+    void setResponseCode(int) -> a
+    void setResponse(java.lang.String) -> a
+    org.json.JSONObject toJSONObject() -> a
+org.apache.cordova.FileUtils -> org.apache.cordova.FileUtils:
+    int NOT_FOUND_ERR -> a
+    int SECURITY_ERR -> b
+    int ABORT_ERR -> c
+    int NOT_READABLE_ERR -> d
+    int ENCODING_ERR -> e
+    int NO_MODIFICATION_ALLOWED_ERR -> f
+    int INVALID_STATE_ERR -> g
+    int SYNTAX_ERR -> h
+    int INVALID_MODIFICATION_ERR -> i
+    int QUOTA_EXCEEDED_ERR -> j
+    int TYPE_MISMATCH_ERR -> k
+    int PATH_EXISTS_ERR -> l
+    int TEMPORARY -> m
+    int PERSISTENT -> n
+    int RESOURCE -> o
+    int APPLICATION -> p
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void notifyDelete(java.lang.String) -> e
+    org.json.JSONObject resolveLocalFileSystemURI(java.lang.String) -> h
+    org.json.JSONArray readEntries(java.lang.String) -> i
+    org.json.JSONObject transferTo(java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    java.io.File createDestination(java.lang.String,java.io.File,java.io.File) -> a
+    org.json.JSONObject copyFile(java.io.File,java.io.File) -> a
+    org.json.JSONObject copyDirectory(java.io.File,java.io.File) -> b
+    boolean isCopyOnItself(java.lang.String,java.lang.String) -> b
+    org.json.JSONObject moveFile(java.io.File,java.io.File) -> c
+    org.json.JSONObject moveDirectory(java.io.File,java.io.File) -> d
+    boolean removeRecursively(java.lang.String) -> j
+    boolean removeDirRecursively(java.io.File) -> b
+    boolean remove(java.lang.String) -> k
+    org.json.JSONObject getFile(java.lang.String,java.lang.String,org.json.JSONObject,boolean) -> a
+    java.io.File createFileObject(java.lang.String,java.lang.String) -> c
+    org.json.JSONObject getParent(java.lang.String) -> l
+    boolean atRootDirectory(java.lang.String) -> m
+    java.lang.String stripFileProtocol(java.lang.String) -> b
+    java.io.File createFileObject(java.lang.String) -> n
+    long getMetadata(java.lang.String) -> o
+    org.json.JSONObject getFileMetadata(java.lang.String) -> p
+    org.json.JSONObject requestFileSystem(int) -> a
+    org.json.JSONObject getEntry(java.io.File) -> a
+    org.json.JSONObject getEntry(java.lang.String) -> q
+    boolean isSynch(java.lang.String) -> a
+    java.lang.String readAsText(java.lang.String,java.lang.String) -> a
+    java.lang.String readAsDataURL(java.lang.String) -> c
+    java.lang.String getMimeType(java.lang.String) -> d
+    long write(java.lang.String,java.lang.String,int) -> a
+    long truncateFile(java.lang.String,long) -> a
+    java.io.InputStream getPathFromUri(java.lang.String) -> r
+    java.lang.String getRealPathFromURI(android.net.Uri,org.apache.cordova.api.CordovaInterface) -> a
+org.apache.cordova.GPSListener -> org.apache.cordova.GPSListener:
+    void start() -> c
+org.apache.cordova.GeoBroker -> org.apache.cordova.GeoBroker:
+    org.apache.cordova.GPSListener gpsListener -> a
+    org.apache.cordova.NetworkListener networkListener -> b
+    android.location.LocationManager locationManager -> c
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void clearWatch(java.lang.String) -> b
+    void getCurrentLocation(java.lang.String,boolean) -> a
+    void addWatch(java.lang.String,java.lang.String,boolean) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    org.json.JSONObject returnLocationJSON(android.location.Location) -> a
+    void win(android.location.Location,java.lang.String) -> a
+    void fail(int,java.lang.String,java.lang.String) -> a
+org.apache.cordova.HttpHandler -> org.apache.cordova.HttpHandler:
+org.apache.cordova.LinearLayoutSoftKeyboardDetect -> org.apache.cordova.LinearLayoutSoftKeyboardDetect:
+    int oldHeight -> a
+    int oldWidth -> b
+    int screenWidth -> c
+    int screenHeight -> d
+    org.apache.cordova.DroidGap app -> e
+    void onMeasure(int,int) -> onMeasure
+org.apache.cordova.NetworkListener -> org.apache.cordova.NetworkListener:
+org.apache.cordova.NetworkManager -> org.apache.cordova.NetworkManager:
+    int NOT_REACHABLE -> a
+    int REACHABLE_VIA_CARRIER_DATA_NETWORK -> b
+    int REACHABLE_VIA_WIFI_NETWORK -> c
+    java.lang.String connectionCallbackId -> f
+    android.net.ConnectivityManager sockMan -> d
+    android.content.BroadcastReceiver receiver -> e
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    void updateConnectionInfo(android.net.NetworkInfo) -> a
+    java.lang.String getConnectionInfo(android.net.NetworkInfo) -> b
+    void sendUpdate(java.lang.String) -> b
+    java.lang.String getType(android.net.NetworkInfo) -> c
+    void access$000(org.apache.cordova.NetworkManager,android.net.NetworkInfo) -> a
+org.apache.cordova.NetworkManager$1 -> org.apache.cordova.ac:
+    org.apache.cordova.NetworkManager this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+org.apache.cordova.Notification -> org.apache.cordova.Notification:
+    int confirmResult -> a
+    android.app.ProgressDialog spinnerDialog -> b
+    android.app.ProgressDialog progressDialog -> c
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void beep(long) -> a
+    void vibrate(long) -> b
+    void alert(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void confirm(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
+    void activityStart(java.lang.String,java.lang.String) -> a
+    void activityStop() -> b
+    void progressStart(java.lang.String,java.lang.String) -> b
+    void progressValue(int) -> a
+    void progressStop() -> c
+org.apache.cordova.Notification$1 -> org.apache.cordova.ad:
+    org.apache.cordova.api.CordovaInterface val$cordova -> a
+    java.lang.String val$message -> b
+    java.lang.String val$title -> c
+    java.lang.String val$buttonLabel -> d
+    org.apache.cordova.Notification val$notification -> e
+    java.lang.String val$callbackId -> f
+    org.apache.cordova.Notification this$0 -> g
+    void run() -> run
+org.apache.cordova.Notification$1$1 -> org.apache.cordova.ae:
+    org.apache.cordova.Notification$1 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.Notification$2 -> org.apache.cordova.af:
+    org.apache.cordova.api.CordovaInterface val$cordova -> a
+    java.lang.String val$message -> b
+    java.lang.String val$title -> c
+    java.lang.String[] val$fButtons -> d
+    org.apache.cordova.Notification val$notification -> e
+    java.lang.String val$callbackId -> f
+    org.apache.cordova.Notification this$0 -> g
+    void run() -> run
+org.apache.cordova.Notification$2$1 -> org.apache.cordova.ag:
+    org.apache.cordova.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.Notification$2$2 -> org.apache.cordova.ah:
+    org.apache.cordova.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.Notification$2$3 -> org.apache.cordova.ai:
+    org.apache.cordova.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.apache.cordova.Notification$3 -> org.apache.cordova.aj:
+    org.apache.cordova.Notification val$notification -> a
+    org.apache.cordova.api.CordovaInterface val$cordova -> b
+    java.lang.String val$title -> c
+    java.lang.String val$message -> d
+    org.apache.cordova.Notification this$0 -> e
+    void run() -> run
+org.apache.cordova.Notification$3$1 -> org.apache.cordova.ak:
+    org.apache.cordova.Notification$3 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+org.apache.cordova.Notification$4 -> org.apache.cordova.al:
+    org.apache.cordova.Notification val$notification -> a
+    org.apache.cordova.api.CordovaInterface val$cordova -> b
+    java.lang.String val$title -> c
+    java.lang.String val$message -> d
+    org.apache.cordova.Notification this$0 -> e
+    void run() -> run
+org.apache.cordova.Notification$4$1 -> org.apache.cordova.am:
+    org.apache.cordova.Notification$4 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+org.apache.cordova.SplashScreen -> org.apache.cordova.SplashScreen:
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+org.apache.cordova.StandAlone -> org.apache.cordova.StandAlone:
+    void onCreate(android.os.Bundle) -> onCreate
+org.apache.cordova.Storage -> org.apache.cordova.Storage:
+    android.database.sqlite.SQLiteDatabase myDb -> a
+    java.lang.String path -> b
+    java.lang.String dbName -> c
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    void openDatabase(java.lang.String,java.lang.String,java.lang.String,long) -> a
+    void executeSql(java.lang.String,java.lang.String[],java.lang.String) -> a
+    boolean isDDL(java.lang.String) -> b
+    void processResults(android.database.Cursor,java.lang.String) -> a
+org.apache.cordova.TempListener -> org.apache.cordova.TempListener:
+    android.hardware.Sensor mSensor -> a
+    android.hardware.SensorManager sensorManager -> b
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void onDestroy() -> a
+    void start() -> b
+    void stop() -> c
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+org.apache.cordova.api.CordovaInterface -> org.apache.cordova.api.CordovaInterface:
+    void startActivityForResult(org.apache.cordova.api.IPlugin,android.content.Intent,int) -> a
+    android.app.Activity getActivity() -> a
+    void cancelLoadUrl() -> d
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> b
+org.apache.cordova.api.IPlugin -> org.apache.cordova.api.IPlugin:
+    org.apache.cordova.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    void setView(org.apache.cordova.CordovaWebView) -> a
+    void onPause(boolean) -> b
+    void onResume(boolean) -> c
+    void onNewIntent(android.content.Intent) -> a
+    void onDestroy() -> a
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    boolean onOverrideUrlLoading(java.lang.String) -> f
+org.apache.cordova.api.LOG -> org.apache.cordova.api.LOG:
+    int LOGLEVEL -> a
+    void setLogLevel(java.lang.String) -> a
+    void v(java.lang.String,java.lang.String) -> a
+    void d(java.lang.String,java.lang.String) -> b
+    void i(java.lang.String,java.lang.String) -> c
+    void w(java.lang.String,java.lang.String) -> d
+    void e(java.lang.String,java.lang.String) -> e
+    void e(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void v(java.lang.String,java.lang.String,java.lang.Object[]) -> a
+    void d(java.lang.String,java.lang.String,java.lang.Object[]) -> b
+    void i(java.lang.String,java.lang.String,java.lang.Object[]) -> c
+org.apache.cordova.api.LegacyContext -> org.apache.cordova.api.LegacyContext:
+    org.apache.cordova.api.CordovaInterface cordova -> a
+    void cancelLoadUrl() -> d
+    android.app.Activity getActivity() -> a
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> b
+    void startActivityForResult(org.apache.cordova.api.IPlugin,android.content.Intent,int) -> a
+org.apache.cordova.api.Plugin -> org.apache.cordova.api.Plugin:
+    org.apache.cordova.CordovaWebView webView -> q
+    org.apache.cordova.api.LegacyContext ctx -> r
+    org.apache.cordova.api.CordovaInterface cordova -> s
+    boolean isSynch(java.lang.String) -> a
+    void setContext(org.apache.cordova.api.CordovaInterface) -> a
+    void setView(org.apache.cordova.CordovaWebView) -> a
+    void onPause(boolean) -> b
+    void onResume(boolean) -> c
+    void onNewIntent(android.content.Intent) -> a
+    void onDestroy() -> a
+    java.lang.Object onMessage(java.lang.String,java.lang.Object) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    boolean onOverrideUrlLoading(java.lang.String) -> f
+    void sendJavascript(java.lang.String) -> g
+    void success(org.apache.cordova.api.PluginResult,java.lang.String) -> a
+    void error(org.apache.cordova.api.PluginResult,java.lang.String) -> b
+org.apache.cordova.api.PluginEntry -> org.apache.cordova.api.PluginEntry:
+    java.lang.String service -> a
+    java.lang.String pluginClass -> b
+    org.apache.cordova.api.IPlugin plugin -> c
+    boolean onload -> d
+    org.apache.cordova.api.IPlugin createPlugin(org.apache.cordova.CordovaWebView,org.apache.cordova.api.CordovaInterface) -> a
+    java.lang.Class getClassByName(java.lang.String) -> a
+    boolean isCordovaPlugin(java.lang.Class) -> a
+org.apache.cordova.api.PluginManager -> org.apache.cordova.api.PluginManager:
+    java.lang.String TAG -> b
+    java.util.HashMap entries -> c
+    org.apache.cordova.api.CordovaInterface ctx -> d
+    org.apache.cordova.CordovaWebView app -> e
+    boolean firstRun -> f
+    java.util.HashMap urlMap -> a
+    void init() -> a
+    void loadPlugins() -> b
+    void clearPluginObjects() -> c
+    void startupPlugins() -> d
+    java.lang.String exec(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    org.apache.cordova.api.IPlugin getPlugin(java.lang.String) -> b
+    void addService(org.apache.cordova.api.PluginEntry) -> a
+    void onPause(boolean) -> a
+    void onResume(boolean) -> b
+    void onDestroy() -> e
+    java.lang.Object postMessage(java.lang.String,java.lang.Object) -> a
+    void onNewIntent(android.content.Intent) -> a
+    boolean onOverrideUrlLoading(java.lang.String) -> a
+    void pluginConfigurationMissing() -> f
+    org.apache.cordova.CordovaWebView access$000(org.apache.cordova.api.PluginManager) -> a
+org.apache.cordova.api.PluginManager$1 -> org.apache.cordova.api.a:
+    org.apache.cordova.api.IPlugin val$plugin -> a
+    java.lang.String val$action -> b
+    org.json.JSONArray val$args -> c
+    java.lang.String val$callbackId -> d
+    org.apache.cordova.api.PluginManager this$0 -> e
+    void run() -> run
+org.apache.cordova.api.PluginResult -> org.apache.cordova.api.PluginResult:
+    int status -> b
+    java.lang.String message -> c
+    boolean keepCallback -> d
+    java.lang.String[] StatusMessages -> a
+    void setKeepCallback(boolean) -> a
+    int getStatus() -> a
+    boolean getKeepCallback() -> b
+    java.lang.String getJSONString() -> c
+    java.lang.String toSuccessCallbackString(java.lang.String) -> a
+    java.lang.String toErrorCallbackString(java.lang.String) -> b
+org.apache.cordova.api.PluginResult$Status -> org.apache.cordova.api.PluginResult$Status:
+    org.apache.cordova.api.PluginResult$Status NO_RESULT -> a
+    org.apache.cordova.api.PluginResult$Status OK -> b
+    org.apache.cordova.api.PluginResult$Status CLASS_NOT_FOUND_EXCEPTION -> c
+    org.apache.cordova.api.PluginResult$Status ILLEGAL_ACCESS_EXCEPTION -> d
+    org.apache.cordova.api.PluginResult$Status INSTANTIATION_EXCEPTION -> e
+    org.apache.cordova.api.PluginResult$Status MALFORMED_URL_EXCEPTION -> f
+    org.apache.cordova.api.PluginResult$Status IO_EXCEPTION -> g
+    org.apache.cordova.api.PluginResult$Status INVALID_ACTION -> h
+    org.apache.cordova.api.PluginResult$Status JSON_EXCEPTION -> i
+    org.apache.cordova.api.PluginResult$Status ERROR -> j
+    org.apache.cordova.api.PluginResult$Status[] $VALUES -> k
+    org.apache.cordova.api.PluginResult$Status[] values() -> values
+    org.apache.cordova.api.PluginResult$Status valueOf(java.lang.String) -> valueOf
+org.apache.cordova.file.EncodingException -> org.apache.cordova.file.EncodingException:
+org.apache.cordova.file.FileExistsException -> org.apache.cordova.file.FileExistsException:
+org.apache.cordova.file.InvalidModificationException -> org.apache.cordova.file.InvalidModificationException:
+org.apache.cordova.file.NoModificationAllowedException -> org.apache.cordova.file.NoModificationAllowedException:
+org.apache.cordova.file.TypeMismatchException -> org.apache.cordova.file.TypeMismatchException:
