@@ -31564,12 +31564,12 @@ Methods (count = 6):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/blackbourna/softeng/MazeBallActivity
++ Program class: com/blackbourna/softeng/TiltTheBallActivity
   Superclass:    org/apache/cordova/DroidGap
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.blackbourna.softeng.MazeBallActivity extends org.apache.cordova.DroidGap
+    = public class com.blackbourna.softeng.TiltTheBallActivity extends org.apache.cordova.DroidGap
 
 Interfaces (count = 0):
 
@@ -31582,16 +31582,16 @@ Constant Pool (count = 68):
   + Class [android/os/PowerManager]
   + Class [android/os/PowerManager$WakeLock]
   + Class [android/view/MenuInflater]
-  + Class [com/blackbourna/softeng/MazeBallActivity]
+  + Class [com/blackbourna/softeng/TiltTheBallActivity]
   + Class [org/apache/cordova/DroidGap]
-  + Fieldref [com/blackbourna/softeng/MazeBallActivity.a Landroid/os/PowerManager$WakeLock;]
+  + Fieldref [com/blackbourna/softeng/TiltTheBallActivity.a Landroid/os/PowerManager$WakeLock;]
   + Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
   + Methodref [android/os/PowerManager$WakeLock.acquire ()V]
   + Methodref [android/os/PowerManager$WakeLock.release ()V]
   + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
-  + Methodref [com/blackbourna/softeng/MazeBallActivity.finish ()V]
-  + Methodref [com/blackbourna/softeng/MazeBallActivity.getMenuInflater ()Landroid/view/MenuInflater;]
-  + Methodref [com/blackbourna/softeng/MazeBallActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + Methodref [com/blackbourna/softeng/TiltTheBallActivity.finish ()V]
+  + Methodref [com/blackbourna/softeng/TiltTheBallActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+  + Methodref [com/blackbourna/softeng/TiltTheBallActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   + Methodref [org/apache/cordova/DroidGap.<init> ()V]
   + Methodref [org/apache/cordova/DroidGap.a (Ljava/lang/String;)V]
   + Methodref [org/apache/cordova/DroidGap.onCreate (Landroid/os/Bundle;)V]
@@ -31627,7 +31627,7 @@ Constant Pool (count = 68):
   + Utf8 [android/os/PowerManager]
   + Utf8 [android/os/PowerManager$WakeLock]
   + Utf8 [android/view/MenuInflater]
-  + Utf8 [com/blackbourna/softeng/MazeBallActivity]
+  + Utf8 [com/blackbourna/softeng/TiltTheBallActivity]
   + Utf8 [file:///android_asset/www/soft_eng.html]
   + Utf8 [finish]
   + Utf8 [getMenuInflater]
@@ -31650,7 +31650,7 @@ Fields (count = 1):
 Methods (count = 5):
   - Method:       <init>()V
     Access flags: 0x1
-      = public MazeBallActivity()
+      = public TiltTheBallActivity()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -31672,7 +31672,7 @@ Methods (count = 5):
       [6] ldc #5
         + String [power]
       [8] invokevirtual #18
-        + Methodref [com/blackbourna/softeng/MazeBallActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        + Methodref [com/blackbourna/softeng/TiltTheBallActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [11] checkcast #6
         + Class [android/os/PowerManager]
       [14] astore_2 v2
@@ -31685,10 +31685,10 @@ Methods (count = 5):
       [21] invokevirtual #12
         + Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
       [24] putfield #11
-        + Fieldref [com/blackbourna/softeng/MazeBallActivity.a Landroid/os/PowerManager$WakeLock;]
+        + Fieldref [com/blackbourna/softeng/TiltTheBallActivity.a Landroid/os/PowerManager$WakeLock;]
       [27] aload_0 v0
       [28] getfield #11
-        + Fieldref [com/blackbourna/softeng/MazeBallActivity.a Landroid/os/PowerManager$WakeLock;]
+        + Fieldref [com/blackbourna/softeng/TiltTheBallActivity.a Landroid/os/PowerManager$WakeLock;]
       [31] invokevirtual #13
         + Methodref [android/os/PowerManager$WakeLock.acquire ()V]
       [34] aload_0 v0
@@ -31706,7 +31706,7 @@ Methods (count = 5):
     + Code attribute instructions (code length = 12, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #11
-        + Fieldref [com/blackbourna/softeng/MazeBallActivity.a Landroid/os/PowerManager$WakeLock;]
+        + Fieldref [com/blackbourna/softeng/TiltTheBallActivity.a Landroid/os/PowerManager$WakeLock;]
       [4] invokevirtual #14
         + Methodref [android/os/PowerManager$WakeLock.release ()V]
       [7] aload_0 v0
@@ -31725,7 +31725,7 @@ Methods (count = 5):
         + Methodref [org/apache/cordova/DroidGap.onPause ()V]
       [4] aload_0 v0
       [5] invokevirtual #16
-        + Methodref [com/blackbourna/softeng/MazeBallActivity.finish ()V]
+        + Methodref [com/blackbourna/softeng/TiltTheBallActivity.finish ()V]
       [8] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -31736,7 +31736,7 @@ Methods (count = 5):
     + Code attribute instructions (code length = 12, locals = 2, stack = 3):
       [0] aload_0 v0
       [1] invokevirtual #17
-        + Methodref [com/blackbourna/softeng/MazeBallActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+        + Methodref [com/blackbourna/softeng/TiltTheBallActivity.getMenuInflater ()Landroid/view/MenuInflater;]
       [4] ldc #2
         + Integer [2131165184]
       [6] aload_1 v1

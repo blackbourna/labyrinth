@@ -745,7 +745,7 @@ android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-com.blackbourna.softeng.MazeBallActivity -> com.blackbourna.softeng.MazeBallActivity:
+com.blackbourna.softeng.TiltTheBallActivity -> com.blackbourna.softeng.TiltTheBallActivity:
     android.os.PowerManager$WakeLock wakelock -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy

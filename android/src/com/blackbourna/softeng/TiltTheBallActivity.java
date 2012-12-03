@@ -6,7 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.view.Menu;
-public class MazeBallActivity extends DroidGap {
+public class TiltTheBallActivity extends DroidGap {
     PowerManager.WakeLock wakelock;
     @Override
     public void onCreate(Bundle savedInstanceState) {

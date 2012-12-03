@@ -11,8 +11,21 @@ goog.require("Levels");
 
 // entrypoint
 soft_eng.Game = function(director, level) {
+    
+    var deviceName = navigator.userAgent.toLowerCase();
+    
+    var FRAME_RATE = 24;
+    /*
+    if (deviceName.indexOf('nexus 7') > -1) {
+        FRAME_RATE = 16;
+    } else if (deviceName.indexOf('samsung-sgh') > -1) {
+        FRAME_RATE = 45;
+    }
+    * */
+    
     if (level % Levels.length == Levels.length - 1) {
         soft_eng.SCALE = 30.0;
+        FRAME_RATE /= 2;
     } else {
         soft_eng.SCALE = 60.0;
     }
@@ -70,16 +83,6 @@ soft_eng.Game = function(director, level) {
 	prevAcceleration = {};
     var world = new b2World(new b2Vec2(0, 0), true);
     
-    var deviceName = navigator.userAgent.toLowerCase();
-    
-    var FRAME_RATE = 18;
-    
-    if (deviceName.indexOf('nexus 7') > -1) {
-        FRAME_RATE = 16;
-    } else if (deviceName.indexOf('samsung-sgh') > -1) {
-        FRAME_RATE = 45;
-    }
-    
     var balls = [];
     var goal = null;
     var traps = [];
@@ -92,6 +95,7 @@ soft_eng.Game = function(director, level) {
         // Ball
         var b = new soft_eng.Ball(pos, world);
         balls.push(b);
+        //lime.scheduleManager.setDisplayRate(1000/FRAME_RATE/balls.length);
         layer.appendChild(b.sprite);
     };
     this.removeBall = function(ball) {
@@ -100,9 +104,11 @@ soft_eng.Game = function(director, level) {
                 ball.sprite.setHidden(true);
                 world.DestroyBody(ball.body);
                 balls.splice(x, 1);
-                console.log("balls.length = " + balls.length);
             }
         }
+        //if (balls.length > 0) {
+        //    lime.scheduleManager.setDisplayRate(1000/FRAME_RATE/balls.length);
+        //}
     }
 	var startGame = function() {
         console.log("Entering Maze loop");
@@ -140,14 +146,13 @@ soft_eng.Game = function(director, level) {
         // http://stackoverflow.com/questions/12317040/box2dwebEMPTY-walls-dont-bounce-a-slow-object
         //Box2D.Common.b2Settings.b2_velocityThreshold = 0.0;
         // game loop
-        lime.scheduleManager.setDisplayRate(FRAME_RATE);
         
         var worldStep = function(dt) {
             //http://stackoverflow.com/questions/9451746/box2d-circular-body-stuck-in-corners
             // setting to never sleep seems to negatively affect performance so reset the bool here
-            world.Step(1 / FRAME_RATE, 8, 3);
+            world.Step(1 / FRAME_RATE, 8, 4);
             
-            var kFilterFactor = 0.2;
+            //var kFilterFactor = 0.2;
             if (ballAcceleration.x && ballAcceleration.y) {
                 /*var accel = {};
                 if (prevAcceleration.x && prevAcceleration.y) {
@@ -161,7 +166,8 @@ soft_eng.Game = function(director, level) {
                 prevAcceleration.y = accel.y;
 
                 var newGravity = new b2Vec2(accel.x, accel.y);*/
-		var newGravity = new b2Vec2(-ballAcceleration.x/6, ballAcceleration.y/6);
+                var factor = 1.0; //originally 6
+                var newGravity = new b2Vec2(-ballAcceleration.x/factor, ballAcceleration.y/factor);
                 world.SetGravity(newGravity); // set the world's gravity, the ball will move accordingly
 
                 // set the ball sprite's position and attach to ball object
@@ -190,7 +196,7 @@ soft_eng.Game = function(director, level) {
 				levelFinishedAlert();
 				
 			}
-			console.log("balls.length = " + balls.length);
+			//console.log("balls.length = " + balls.length);
         };
         
         lime.scheduleManager.schedule(worldStep, this);
@@ -213,7 +219,7 @@ soft_eng.Game = function(director, level) {
 	};
 	
 	// Start listening for Accelerometer, set frequency
-	var options = { frequency: FRAME_RATE * 12 }; // this should be some multiple of the frame rate (in ms, rather than fraction) (24x12=288)
+	var options = { frequency: FRAME_RATE * 6 }; // this should be some multiple of the frame rate (in ms, rather than fraction) (24x12=288)
 	var watchID = navigator.accelerometer.watchAcceleration(onAccelerometerSuccess, onAccelerometerError, options);
 
 	world.SetContactListener(new soft_eng.WorldListener(this));
@@ -251,7 +257,7 @@ soft_eng.Game = function(director, level) {
 	var showMenu = function() {
 		//this.director.setPaused(true);
 		navigator.notification.confirm(
-		'Why would you want to quit my game JERK?', // message
+		'Are you sure that you want to quit?', // message
 		continueGame, // callback
 		'Game Paused',            	// title
 		'Quit,Continue'          		// actions. this can be 'Continue,Quit,etc..'
