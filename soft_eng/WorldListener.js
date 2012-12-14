@@ -43,7 +43,7 @@ soft_eng.WorldListener = function(game) {
             }
 		} else if (contactDataA == MazeEnum.BLOCK) {
             if (impulse.normalImpulses[0] < 0.05) return;
-            console.log(impulse.normalImpulses[0]);
+            //console.log(impulse.normalImpulses[0]);
             self.wallhitsnd.seekTo(0);
             self.wallhitsnd.play();
         }
